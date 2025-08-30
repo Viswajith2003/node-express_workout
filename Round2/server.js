@@ -3,12 +3,16 @@ const app = express();
 const path = require("path");
 
 // Serve static files from "public" folder
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 // Optional: clean routes without .html
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "about.html"));
-});
+// app.get("/",(req,res)=>{
+//   res.send("This is homepage");
+// })
+
+// app.get("/about", (req, res) => {
+//   res.sendFile(path.join(__dirname, "public", "about.html"));
+// });
 
 app.get("/contact", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "contact.html"));
